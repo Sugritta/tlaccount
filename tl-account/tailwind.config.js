@@ -1,4 +1,4 @@
-/** @type {import('tailwindcss').Config} */
+// tailwind.config.js
 export default {
   content: [
     "./index.html",
@@ -7,7 +7,17 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Noto Sans Thai', 'sans-serif'],
+        sans: [
+          'system-ui',
+          '-apple-system',
+          'BlinkMacSystemFont',
+          'Segoe UI',
+          'Roboto',
+          'Helvetica',
+          'Arial',
+          'Sarabun', // Thai font
+          'sans-serif'
+        ],
       },
     },
   },
