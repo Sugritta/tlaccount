@@ -82,13 +82,15 @@ export default function TAccountMicrosite() {
           >
             แอดไลน์เพื่อติดตามสิทธิ์ทันที
           </a>
-          
-          <button
-            onClick={() => setIsSubmitted(false)}
-            className="mt-6 text-blue-900 underline hover:text-orange-500 transition-colors"
-          >
-            กลับสู่หน้าหลัก
-          </button>
+      
+          <div className="mt-6">
+              <button
+                onClick={() => setIsSubmitted(false)}
+                className="text-blue-900 underline hover:text-orange-500 transition-colors text-base"
+              >
+                กลับสู่หน้าหลัก
+              </button>
+            </div>
         </div>
       </div>
     );
