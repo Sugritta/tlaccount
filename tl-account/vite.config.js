@@ -1,8 +1,8 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// https://vite.dev/config/
+// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/tlaccount/', // 👈 เพิ่มบรรทัดนี้
+  base: '/tlaccount/', // นี่คือการแก้ไขที่ถูกต้อง
 })
