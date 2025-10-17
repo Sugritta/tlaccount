@@ -113,7 +113,7 @@ export default function TAccountMicrosite() {
           {/* Headline */}
           <div className="text-center mb-8">
             <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-blue-900 leading-tight">
-              ตรวจสุขภาพบัญชีฟรี <span className="text-orange-500">ฟรีค่าทำบัญชีเดือนแรก</span> สำหรับธุรกิจ SME ทั่วไทย
+              <span className="text-orange-500">ฟรีค่าทำบัญชีเดือนแรก</span> สำหรับธุรกิจ SME ทั่วไทย
             </h2>
           </div>
 
@@ -159,13 +159,13 @@ export default function TAccountMicrosite() {
           {/* CTA Form */}
           <div className="bg-white rounded-lg shadow-lg p-6 sm:p-8 border-2 border-orange-500">
             <h3 className="text-2xl font-bold text-blue-900 mb-6 text-center">
-              กรอกข้อมูลเพื่อรับสิทธิ์ฟรี
+              ข้อมูลให้เราติดต่อกลับ
             </h3>
             
             <div className="space-y-4">
               <div>
                 <label className="block text-blue-900 font-medium mb-2">
-                  ชื่อ-นามสกุล
+                  ชื่อ
                 </label>
                 <input
                   type="text"
@@ -173,14 +173,14 @@ export default function TAccountMicrosite() {
                   value={formData.fullName}
                   onChange={handleInputChange}
                   className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-orange-500 focus:outline-none text-blue-900"
-                  placeholder="กรอกชื่อ-นามสกุล"
+                  placeholder="กรอกชื่อ"
                   required
                 />
               </div>
 
               <div>
                 <label className="block text-blue-900 font-medium mb-2">
-                  เบอร์โทรศัพท์
+                  เบอร์ติดต่อกลับ
                 </label>
                 <input
                   type="tel"
@@ -194,23 +194,8 @@ export default function TAccountMicrosite() {
               </div>
 
               <div>
-                <label className="block text-blue-900 font-medium mb-2">
-                  ประเภทธุรกิจ
-                </label>
-                <input
-                  type="text"
-                  name="businessType"
-                  value={formData.businessType}
-                  onChange={handleInputChange}
-                  className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-orange-500 focus:outline-none text-blue-900"
-                  placeholder="เช่น ร้านอาหาร, ร้านค้าออนไลน์"
-                  required
-                />
-              </div>
-
-              <div>
                 <label className="block text-blue-900 font-medium mb-3">
-                  บริการที่สนใจ
+                  ประเภทธุรกิจ
                 </label>
                 <div className="flex flex-wrap gap-4">
                   <label className="flex items-center cursor-pointer">
@@ -223,7 +208,7 @@ export default function TAccountMicrosite() {
                       className="w-5 h-5 text-orange-500 focus:ring-orange-500 border-gray-300"
                       required
                     />
-                    <span className="ml-2 text-blue-900 text-base">ตรวจบัญชี</span>
+                    <span className="ml-2 text-blue-900 text-base">ร้านค้า</span>
                   </label>
                   
                   <label className="flex items-center cursor-pointer">
@@ -235,7 +220,7 @@ export default function TAccountMicrosite() {
                       onChange={handleInputChange}
                       className="w-5 h-5 text-orange-500 focus:ring-orange-500 border-gray-300"
                     />
-                    <span className="ml-2 text-blue-900 text-base">จัดทำบัญชี</span>
+                    <span className="ml-2 text-blue-900 text-base">อาหารและเครื่องดื่ม</span>
                   </label>
                   
                   <label className="flex items-center cursor-pointer">
@@ -247,7 +232,7 @@ export default function TAccountMicrosite() {
                       onChange={handleInputChange}
                       className="w-5 h-5 text-orange-500 focus:ring-orange-500 border-gray-300"
                     />
-                    <span className="ml-2 text-blue-900 text-base">ยื่นภาษี</span>
+                    <span className="ml-2 text-blue-900 text-base">ความงามและสุขภาพ</span>
                   </label>
                   
                   <label className="flex items-center cursor-pointer">
@@ -259,7 +244,31 @@ export default function TAccountMicrosite() {
                       onChange={handleInputChange}
                       className="w-5 h-5 text-orange-500 focus:ring-orange-500 border-gray-300"
                     />
-                    <span className="ml-2 text-blue-900 text-base">ทั้งหมด</span>
+                    <span className="ml-2 text-blue-900 text-base">ท่องเที่ยวและที่พัก</span>
+                  </label>
+
+                  <label className="flex items-center cursor-pointer">
+                    <input
+                      type="radio"
+                      name="serviceInterest"
+                      value="all"
+                      checked={formData.serviceInterest === 'all'}
+                      onChange={handleInputChange}
+                      className="w-5 h-5 text-orange-500 focus:ring-orange-500 border-gray-300"
+                    />
+                    <span className="ml-2 text-blue-900 text-base">บริการทั่วไป</span>
+                  </label>
+
+                  <label className="flex items-center cursor-pointer">
+                    <input
+                      type="radio"
+                      name="serviceInterest"
+                      value="all"
+                      checked={formData.serviceInterest === 'all'}
+                      onChange={handleInputChange}
+                      className="w-5 h-5 text-orange-500 focus:ring-orange-500 border-gray-300"
+                    />
+                    <span className="ml-2 text-blue-900 text-base">ก่อสร้างและซ่อมบำรุง</span>
                   </label>
                 </div>
               </div>
